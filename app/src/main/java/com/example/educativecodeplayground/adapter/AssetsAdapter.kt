@@ -59,7 +59,7 @@ class AssetsAdapter(private val onClickListener:OnClickListener) : RecyclerView.
                     cryptoName.text = name.toString()
 
                     holder.itemView.setOnClickListener {
-                        onClickListener.onClick(name.toLowerCase())
+                        onClickListener.onClick(id)
                     }
                 }
             }
@@ -70,7 +70,7 @@ class AssetsAdapter(private val onClickListener:OnClickListener) : RecyclerView.
         return differ.currentList.size
     }
 
-    class OnClickListener(val clickListener: (name:String) -> Unit){
-        fun onClick(name: String) = clickListener(name)
+    class OnClickListener(val clickListener: (id:String) -> Unit){
+        fun onClick(id: String) = clickListener(id)
     }
 }

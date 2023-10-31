@@ -28,8 +28,8 @@ class CoinDetailsFragment : Fragment(R.layout.fragment_coin_details) {
         val binding = FragmentCoinDetailsBinding.bind(view)
         fragmentCoinDetailsBinding = binding
 
-        viewModel.getCoinDetail(args.name)
-        Log.d("COINDETAIL : ","ID = ${args.name}")
+        viewModel.getCoinDetail(args.id)
+        Log.d("COINDETAIL : ","ID = ${args.id}")
         viewModel.coinDetail?.observe(viewLifecycleOwner){ coinDetails ->
             binding.apply {
                 coinDetails?.data?.apply {
@@ -46,12 +46,4 @@ class CoinDetailsFragment : Fragment(R.layout.fragment_coin_details) {
 
         }
     }
-
-
-
-
-
-
-
-
 }

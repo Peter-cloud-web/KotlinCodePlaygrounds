@@ -9,8 +9,9 @@
         android:name="com.example.educativecodeplayground.presentation.CoinDetailsFragment"
         android:label="CoinDetailsFragment"
         tools:layout="@layout/fragment_coin_details">
+
         <argument
-            android:name="name"
+            android:name="id"
             app:argType="string" />
     </fragment>
     <fragment

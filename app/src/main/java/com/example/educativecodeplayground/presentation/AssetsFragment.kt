@@ -46,10 +46,10 @@ class AssetsFragment : Fragment(R.layout.fragment_assets) {
 
     }
 
-    private val listener = AssetsAdapter.OnClickListener { name ->
+    private val listener = AssetsAdapter.OnClickListener { id ->
         findNavController().navigate(
             AssetsFragmentDirections.actionAssetsFragment2ToCoinDetailsFragment(
-                name
+                id
             )
         )
     }
